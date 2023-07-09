@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "a682c44b-c316-4c48-85d6-bed7deae744c",
+		"name": "masrGODB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39682135"
+	},
+	"item": [
+		{
+			"name": "all countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/countries/"
+			},
+			"response": []
+		},
+		{
+			"name": "country (by name)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/countries/name/{{cName}}"
+			},
+			"response": []
+		},
+		{
+			"name": "country (by budget)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/countries/budget/{{cBudget}}"
+			},
+			"response": []
+		},
+		{
+			"name": "country",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Barcelona\",\r\n    \"description\" : \"A beachside city =, known for its famous dish paela.\",\r\n    \"nationality\" : \"Spanish\",\r\n    \"currency\" : \"EUR\",\r\n    \"latitude\" : \"41\",\r\n    \"longitude\" : \"2\",\r\n    \"budget\" : \"300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/countries/"
+			},
+			"response": []
+		},
+		{
+			"name": "existing country data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\" : \"\",\r\n    \"nationality\" : \"\",\r\n    \"currency\" : \"USD\",\r\n    \"latitude\" : \"\",\r\n    \"longitude\" : \"\",\r\n    \"budget\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/countries/Russia"
+			},
+			"response": []
+		},
+		{
+			"name": "country (by name)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\" : \"\",\r\n    \"nationality\" : \"\",\r\n    \"currency\" : \"\",\r\n    \"latitude\" : \"\",\r\n    \"longitude\" : \"\",\r\n    \"budget\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/countries/name/{{cName}}"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cName",
+			"value": "Italy"
+		},
+		{
+			"key": "cBudget",
+			"value": "700"
+		}
+	]
+}
