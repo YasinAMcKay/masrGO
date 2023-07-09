@@ -65,7 +65,7 @@
 						}
 					}
 				},
-				"url": "localhost:8080/api/countries/Russia"
+				"url": "localhost:8080/api/countries/USA"
 			},
 			"response": []
 		},
